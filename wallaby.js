@@ -35,7 +35,10 @@ module.exports = function (wallaby) {
         path.join(wallaby.projectCacheDir, 'projects/test-lib/src/lib'),
         path.join(wallaby.projectCacheDir, 'projects'),
         'node_modules'
-      ]
+      ],
+      alias: {
+        'test-lib': path.join(wallaby.projectCacheDir, 'projects/test-lib/src/public-api')
+      }
     },
     node: {
       fs: 'empty',
